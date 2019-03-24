@@ -13,6 +13,9 @@ const NavBar = () => {
             <NavItem>
                 <NavLink href="/generate" active={window.location.pathname === "/generate"}>Generate Groups</NavLink>
             </NavItem>
+            <NavItem>
+                <NavLink href="/random" active={window.location.pathname === "/random"}>Generate Random Student</NavLink>
+            </NavItem>
         </Nav>
     )
 }
