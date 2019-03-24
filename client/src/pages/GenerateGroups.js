@@ -90,7 +90,7 @@ class GenerateGroups extends Component {
                             <option value="4">4</option>
                         </Input>
                     </FormGroup>
-                    <Button onClick={this.handleFormSubmit} disabled={!this.state.maxSize}>Submit</Button>
+                    <Button onClick={this.handleFormSubmit} disabled={!this.state.maxSize || !this.state.class}>Submit</Button>
                 </Form>
                 {this.state.groups.length ? (
                     <div>
