@@ -6,12 +6,17 @@ class GenerateGroups extends Component {
     state = {
         maxSize: null,
         students: [],
-        groups: []
+        classes: [],
+        groups: [],
+        class: ""
     }
 
     componentDidMount() {
-        API.getStudents("test-class-1")
-            .then(res => this.setState({ students: res.data }))
+        API.getStudents()
+            .then(res => {
+                const classes = [...new Set(res.data.map(student => student.class))];
+                this.setState({ students: res.data, classes });
+            })
             .catch(err => console.log(err));
     }
 
@@ -26,7 +31,7 @@ class GenerateGroups extends Component {
     }
 
     shuffleArr = arr => {
-        var currentIndex = arr.length, temporaryValue, randomIndex;
+        let currentIndex = arr.length, temporaryValue, randomIndex;
 
         while (0 !== currentIndex) {
           randomIndex = Math.floor(Math.random() * currentIndex);
@@ -36,14 +41,14 @@ class GenerateGroups extends Component {
           arr[currentIndex] = arr[randomIndex];
           arr[randomIndex] = temporaryValue;
         }
-
         return arr;
     }
 
     setGroups = () => {
-        const students = this.shuffleArr([...this.state.students]);
         const size = Number(this.state.maxSize);
         const newGroups = [];
+        let students = this.state.students.filter(student => student.class === this.state.class);
+        students = this.shuffleArr(students);
 
         while (students.length) {
             newGroups.push(students.splice(0, size));
@@ -66,9 +71,20 @@ class GenerateGroups extends Component {
             <>
                 <Form>
                     <FormGroup>
-                        <Label for="name">Max Group Size</Label>
+                        {this.state.classes.length ? (
+                            <>
+                                <Label for="name" hidden>Choose Class</Label>
+                                <Input type="select" name="class" id="class" value={this.state.class} onChange={this.handleInputChange}>
+                                    <option>Choose class</option>
+                                    {this.state.classes.map(classId => (
+                                        <option value={classId}>{classId}</option>
+                                    ))}
+                                </Input>
+                            </>
+                        ) : null}
+                        <Label for="name" hidden>Choose Max Group Size</Label>
                         <Input type="select" name="maxSize" id="maxSize" value={this.state.maxSize} onChange={this.handleInputChange}>
-                            <option>Select maximum group size</option>
+                            <option>Choose max group size</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
