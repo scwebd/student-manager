@@ -1,7 +1,10 @@
 import axios from "axios";
 
 export default {
+    getStudents: function() {
+        return axios.get("/api/students/");
+    },
     createStudent: function(student) {
-        axios.post("/api/students/", student);
+        return axios.post("/api/students/", student);
     }
 }

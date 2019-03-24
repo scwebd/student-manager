@@ -27,7 +27,9 @@ class AddStudent extends Component {
             isInTech: this.state.isInTech === "true"
         }
 
-        API.createStudent(student);
+        API.createStudent(student)
+            .then(res => this.props.history.push(`/`))
+            .catch(err => console.log(err));
     }
 
     render() {
@@ -35,7 +37,7 @@ class AddStudent extends Component {
             <>
                 <Form>
                     <FormGroup>
-                        <Label for="name">Email</Label>
+                        <Label for="name">Name</Label>
                         <Input
                             type="text"
                             name="name"
