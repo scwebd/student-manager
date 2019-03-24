@@ -76,6 +76,7 @@ class AddStudent extends Component {
                             onChange={this.handleInputChange}
                             placeholder="UDEN201902-FT" />
                     </FormGroup>
+                    <legend className="col-form-label">Currently in tech industry?</legend>
                     <FormGroup check>
                         <Label check>
                             <Input
