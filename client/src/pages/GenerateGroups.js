@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 import API from "../utils/API";
+import ClassList from "../components/ClassList";
 
 class GenerateGroups extends Component {
     state = {
@@ -71,17 +72,11 @@ class GenerateGroups extends Component {
             <>
                 <Form>
                     <FormGroup>
-                        {this.state.classes.length ? (
-                            <>
-                                <Label for="name" hidden>Choose Class</Label>
-                                <Input type="select" name="class" id="class" value={this.state.class} onChange={this.handleInputChange}>
-                                    <option>Choose class</option>
-                                    {this.state.classes.map(classId => (
-                                        <option value={classId}>{classId}</option>
-                                    ))}
-                                </Input>
-                            </>
-                        ) : null}
+                        <ClassList 
+                            classes={this.state.classes}
+                            class={this.state.class}
+                            handleInputChange={this.handleInputChange}
+                        />
                         <Label for="name" hidden>Choose Max Group Size</Label>
                         <Input type="select" name="maxSize" id="maxSize" value={this.state.maxSize} onChange={this.handleInputChange}>
                             <option>Choose max group size</option>
