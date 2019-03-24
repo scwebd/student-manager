@@ -10,7 +10,7 @@ class GenerateGroups extends Component {
     }
 
     componentDidMount() {
-        API.getStudents()
+        API.getStudents("test-class-1")
             .then(res => this.setState({ students: res.data }))
             .catch(err => console.log(err));
     }
@@ -22,13 +22,26 @@ class GenerateGroups extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        this.setGroups(event);
+        this.setGroups();
     }
 
-    setGroups = event => {
-        event.preventDefault();
+    shuffleArr = arr => {
+        var currentIndex = arr.length, temporaryValue, randomIndex;
 
-        const students = [...this.state.students];
+        while (0 !== currentIndex) {
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+
+          temporaryValue = arr[currentIndex];
+          arr[currentIndex] = arr[randomIndex];
+          arr[randomIndex] = temporaryValue;
+        }
+
+        return arr;
+    }
+
+    setGroups = () => {
+        const students = this.shuffleArr([...this.state.students]);
         const size = Number(this.state.maxSize);
         const newGroups = [];
 
