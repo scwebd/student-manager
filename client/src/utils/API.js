@@ -6,5 +6,8 @@ export default {
     },
     createStudent: function(student) {
         return axios.post("/api/students/", student);
+    },
+    createGrouping: function(grouping) {
+        return axios.post("/api/groupings", grouping);
     }
 }

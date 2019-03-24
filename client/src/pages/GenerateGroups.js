@@ -9,7 +9,8 @@ class GenerateGroups extends Component {
         students: [],
         classes: [],
         groups: [],
-        class: ""
+        class: "",
+        groupingName: ""
     }
 
     componentDidMount() {
@@ -26,9 +27,23 @@ class GenerateGroups extends Component {
         this.setState({ [name]: value });
     }
 
-    handleFormSubmit = event => {
+    handleGenerateSubmit = event => {
         event.preventDefault();
         this.setGroups();
+    }
+
+    handleGroupingSubmit = event => {
+        event.preventDefault();
+
+        const grouping = {
+            name: this.state.groupingName,
+            class: this.state.class,
+            groups: this.state.groups,
+        }
+
+        API.createGrouping(grouping)
+            .then(res => alert("saved"))
+            .catch(err => console.log(err));
     }
 
     shuffleArr = arr => {
@@ -85,10 +100,23 @@ class GenerateGroups extends Component {
                             <option value="4">4</option>
                         </Input>
                     </FormGroup>
-                    <Button onClick={this.handleFormSubmit} disabled={!this.state.maxSize || !this.state.class}>Submit</Button>
+                    <Button onClick={this.handleGenerateSubmit} disabled={!this.state.maxSize || !this.state.class}>Generate Groups</Button>
                 </Form>
                 {this.state.groups.length ? (
                     <div>
+                        <Form>
+                            <FormGroup>
+                                <Label for="groupingName" hidden>Choose Name for this Grouping</Label>
+                                <Input 
+                                    type="text" 
+                                    name="groupingName" 
+                                    placeholder="Grouping Name"
+                                    value={this.state.groupingName}
+                                    onChange={this.handleInputChange} 
+                                />
+                            </FormGroup>
+                            <Button onClick={this.handleGroupingSubmit} disabled={!this.state.groupingName}>Save Grouping</Button> 
+                        </Form>
                         {this.state.groups.map(group => (
                             <ul>
                                 {group.map(member => (

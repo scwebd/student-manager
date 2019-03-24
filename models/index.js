@@ -1,3 +1,4 @@
 module.exports = {
-  Student: require("./Student")
+  Student: require("./Student"),
+  Grouping: require("./Grouping")
 };
