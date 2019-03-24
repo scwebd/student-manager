@@ -3,8 +3,8 @@ const studentsController = require("../../controllers/studentsController");
 
 // Matches with "/api/students"
 router.route("/")
-  .get(studentsController.findAll)
-  .post(studentsController.create);
+    .get(studentsController.findAll)
+    .post(studentsController.create);
 
 // Matches with "/api/students/:id"
 router

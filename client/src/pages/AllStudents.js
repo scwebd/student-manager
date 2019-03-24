@@ -7,7 +7,7 @@ class AllStudents extends Component {
     }
 
     componentDidMount() {
-        API.getStudents()
+        API.getStudents("test-class-2")
             .then(res => this.setState({ students: res.data }))
             .catch(err => console.log(err));
     }

@@ -16,7 +16,7 @@ const studentSeed = [
         ],
         "name": "Sarah",
         "location": "Arvada, CO",
-        "class": "Test Class 1",
+        "class": "test-class-1",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -27,7 +27,7 @@ const studentSeed = [
         ],
         "name": "Adina",
         "location": "Arvada, CO",
-        "class": "Test Class 1",
+        "class": "test-class-1",
         "isInTech": false,
         "date": new Date(Date.now())
     },
@@ -40,7 +40,7 @@ const studentSeed = [
         ],
         "name": "Leo",
         "location": "Broomfield, CO",
-        "class": "Test Class 1",
+        "class": "test-class-1",
         "isInTech": false,
         "date": new Date(Date.now())
     },
@@ -52,7 +52,7 @@ const studentSeed = [
         ],
         "name": "Lux",
         "location": "City Park",
-        "class": "Test Class 1",
+        "class": "test-class-1",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -64,7 +64,7 @@ const studentSeed = [
         ],
         "name": "Brett",
         "location": "Parker",
-        "class": "Test Class 1",
+        "class": "test-class-1",
         "isInTech": false,
         "date": new Date(Date.now())
     },
@@ -77,7 +77,7 @@ const studentSeed = [
         ],
         "name": "Lew",
         "location": "Westminster, CO",
-        "class": "Test Class 1",
+        "class": "test-class-1",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -89,7 +89,7 @@ const studentSeed = [
         ],
         "name": "Karen",
         "location": "Glendale",
-        "class": "Test Class 1",
+        "class": "test-class-1",
         "isInTech": false,
         "date": new Date(Date.now())
     },
@@ -102,7 +102,7 @@ const studentSeed = [
         ],
         "name": "Al",
         "location": "Rino",
-        "class": "Test Class 1",
+        "class": "test-class-1",
         "isInTech": false,
         "date": new Date(Date.now())
     },
@@ -114,7 +114,7 @@ const studentSeed = [
         ],
         "name": "Clay",
         "location": "Wash Park",
-        "class": "Test Class 1",
+        "class": "test-class-1",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -127,7 +127,7 @@ const studentSeed = [
         ],
         "name": "Katie",
         "location": "Federal Heights",
-        "class": "Test Class 1",
+        "class": "test-class-1",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -139,7 +139,7 @@ const studentSeed = [
         ],
         "name": "Audra",
         "location": "City Park",
-        "class": "Test Class 1",
+        "class": "test-class-1",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -152,7 +152,7 @@ const studentSeed = [
         ],
         "name": "Matthew",
         "location": "Castle Rock",
-        "class": "Test Class 1",
+        "class": "test-class-1",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -165,7 +165,7 @@ const studentSeed = [
         ],
         "name": "Eric",
         "location": "Boulder",
-        "class": "Test Class 1",
+        "class": "test-class-1",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -177,7 +177,7 @@ const studentSeed = [
         ],
         "name": "Lisa",
         "location": "Centennial",
-        "class": "Test Class 1",
+        "class": "test-class-1",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -190,7 +190,7 @@ const studentSeed = [
         ],
         "name": "Brian",
         "location": "LoHi",
-        "class": "Test Class 1",
+        "class": "test-class-1",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -202,7 +202,7 @@ const studentSeed = [
         ],
         "name": "Amanda",
         "location": "Highlands",
-        "class": "Test Class 1",
+        "class": "test-class-1",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -214,7 +214,7 @@ const studentSeed = [
         ],
         "name": "Jason",
         "location": "Westminster",
-        "class": "Test Class 2",
+        "class": "test-class-2",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -225,7 +225,7 @@ const studentSeed = [
         ],
         "name": "Alan",
         "location": "Lakewood",
-        "class": "Test Class 2",
+        "class": "test-class-2",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -237,7 +237,7 @@ const studentSeed = [
         ],
         "name": "Adam",
         "location": "Castle Rock",
-        "class": "Test Class 2",
+        "class": "test-class-2",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -249,7 +249,7 @@ const studentSeed = [
         ],
         "name": "Brenda",
         "location": "Golden",
-        "class": "Test Class 2",
+        "class": "test-class-2",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -261,7 +261,7 @@ const studentSeed = [
         ],
         "name": "Micah",
         "location": "Colorado Springs",
-        "class": "Test Class 2",
+        "class": "test-class-2",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -273,7 +273,7 @@ const studentSeed = [
         ],
         "name": "Josh",
         "location": "Brighton",
-        "class": "Test Class 2",
+        "class": "test-class-2",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -285,7 +285,7 @@ const studentSeed = [
         ],
         "name": "Brooke",
         "location": "LoDo",
-        "class": "Test Class 2",
+        "class": "test-class-2",
         "isInTech": false,
         "date": new Date(Date.now())
     },
@@ -298,7 +298,7 @@ const studentSeed = [
         ],
         "name": "Nathan",
         "location": "Lakewood",
-        "class": "Test Class 2",
+        "class": "test-class-2",
         "isInTech": false,
         "date": new Date(Date.now())
     },
@@ -310,7 +310,7 @@ const studentSeed = [
         ],
         "name": "Aaron",
         "location": "Wheat Ridge",
-        "class": "Test Class 2",
+        "class": "test-class-2",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -322,7 +322,7 @@ const studentSeed = [
         ],
         "name": "Colin",
         "location": "Thornton",
-        "class": "Test Class 2",
+        "class": "test-class-2",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -334,7 +334,7 @@ const studentSeed = [
         ],
         "name": "Hai",
         "location": "Aurora",
-        "class": "Test Class 2",
+        "class": "test-class-2",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -346,7 +346,7 @@ const studentSeed = [
         ],
         "name": "Joe",
         "location": "DTC",
-        "class": "Test Class 2",
+        "class": "test-class-2",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -357,7 +357,7 @@ const studentSeed = [
         ],
         "name": "Diana",
         "location": "LoHi",
-        "class": "Test Class 2",
+        "class": "test-class-2",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -369,7 +369,7 @@ const studentSeed = [
         ],
         "name": "Mac",
         "location": "Wash Park",
-        "class": "Test Class 2",
+        "class": "test-class-2",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -382,7 +382,7 @@ const studentSeed = [
         ],
         "name": "Kim",
         "location": "Parker",
-        "class": "Test Class 2",
+        "class": "test-class-2",
         "isInTech": true,
         "date": new Date(Date.now())
     },
@@ -394,7 +394,7 @@ const studentSeed = [
         ],
         "name": "Drew",
         "location": "Aurora",
-        "class": "Test Class 2",
+        "class": "test-class-2",
         "isInTech": true,
         "date": new Date(Date.now())
     },
