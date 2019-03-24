@@ -8,7 +8,17 @@ class AddStudent extends Component {
         location: "",
         keywords: "",
         class: "",
+        classes: [],
         isInTech: null
+    }
+
+    componentDidMount() {
+        API.getStudents()
+            .then(res => {
+                const classes = [...new Set(res.data.map(student => student.class))];
+                this.setState({ classes });
+            })
+            .catch(err => console.log(err));
     }
 
     handleInputChange = event => {
@@ -44,7 +54,8 @@ class AddStudent extends Component {
                             id="name"
                             value={this.state.name}
                             onChange={this.handleInputChange}
-                            placeholder="Jane Doe" />
+                            placeholder="Jane Doe"
+                        />
                     </FormGroup>
                     <FormGroup>
                         <Label for="location">Location</Label>
@@ -54,7 +65,8 @@ class AddStudent extends Component {
                             id="location"
                             value={this.state.location}
                             onChange={this.handleInputChange}
-                            placeholder="Somewhere, CO" />
+                            placeholder="Somewhere, CO" 
+                        />
                     </FormGroup>
                     <FormGroup>
                         <Label for="keywords">Keywords</Label>
@@ -64,17 +76,25 @@ class AddStudent extends Component {
                             id="keywords"
                             value={this.state.keywords}
                             onChange={this.handleInputChange}
-                            placeholder="Has 2 cats, likes tacos" />
+                            placeholder="Has 2 cats, likes tacos" 
+                        />
                     </FormGroup>
                     <FormGroup>
                         <Label for="class">Class</Label>
                         <Input
                             type="text"
+                            list="classes"
                             name="class"
                             id="class"
                             value={this.state.class}
                             onChange={this.handleInputChange}
-                            placeholder="UDEN201902-FT" />
+                            placeholder="UDEN201902-FT" 
+                        />
+                        <datalist id="classes">
+                            {this.state.classes.map(classId => (
+                                <option value={classId}>{classId}</option>
+                            ))}
+                        </datalist>
                     </FormGroup>
                     <legend className="col-form-label">Currently in tech industry?</legend>
                     <FormGroup check>
@@ -84,8 +104,8 @@ class AddStudent extends Component {
                                 name="isInTech"
                                 value="true"
                                 onChange={this.handleInputChange}
-                                checked={this.state.isInTech === "true"} />{' '}
-                            Yes
+                                checked={this.state.isInTech === "true"} 
+                            />{' '}Yes
                       </Label>
                     </FormGroup>
                     <FormGroup check>
@@ -95,8 +115,8 @@ class AddStudent extends Component {
                                 name="isInTech"
                                 value="false"
                                 onChange={this.handleInputChange}
-                                checked={this.state.isInTech === "false"} />{' '}
-                            No
+                                checked={this.state.isInTech === "false"} 
+                            />{' '}No
                       </Label>
                     </FormGroup>
                     <Button onClick={this.handleFormSubmit}>Submit</Button>
