@@ -4,7 +4,7 @@ import API from "../utils/API";
 import ClassList from "../components/ClassList";
 import StudentListItem from "../components/StudentListItem";
 
-class AllStudents extends Component {
+class ViewStudents extends Component {
     state = {
         students: [],
         filteredStudents: [],
@@ -40,8 +40,7 @@ class AllStudents extends Component {
                 </Form>
                 {this.state.filteredStudents.length ? (
                     <ul>
-                        {this.state.filteredStudents.length ? (
-                            <>
+                        <>
                             {this.state.filteredStudents.map(student => 
                                 <StudentListItem 
                                     name={student.name}
@@ -50,8 +49,7 @@ class AllStudents extends Component {
                                     class={student.class}
                                     isInTech={student.isInTech} />
                             )}
-                            </>
-                        ) : null}
+                        </>
                     </ul>
                 ) : (
                     <h3>Choose a class to see all students.</h3>
@@ -61,4 +59,4 @@ class AllStudents extends Component {
     }
 }
 
-export default AllStudents;
+export default ViewStudents;
