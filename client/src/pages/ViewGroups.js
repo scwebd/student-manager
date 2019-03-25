@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import moment from "moment";
 import { Form, FormGroup } from "reactstrap";
 import API from "../utils/API";
 import ClassList from "../components/ClassList";
@@ -43,7 +44,7 @@ class ViewGroups extends Component {
                         <>
                             {this.state.filteredGroups.map(grouping => 
                                 <li>
-                                    <h2>{grouping.name}</h2>
+                                    <h2>{grouping.name}{grouping.dateCreated ? `, saved ${grouping.dateCreated}` : ""}</h2>
                                     <ul>
                                         {grouping.groups.map(group => (
                                             <li>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import moment from "moment";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 import API from "../utils/API";
 import ClassList from "../components/ClassList";
@@ -39,6 +40,7 @@ class GenerateGroups extends Component {
             name: this.state.groupingName,
             class: this.state.class,
             groups: this.state.groups,
+            dateCreated: moment().format("LL")
         }
 
         API.createGrouping(grouping)

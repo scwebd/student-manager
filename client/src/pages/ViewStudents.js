@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, FormGroup, Label, Input, Button } from "reactstrap";
+import { Form, FormGroup } from "reactstrap";
 import API from "../utils/API";
 import ClassList from "../components/ClassList";
 import StudentListItem from "../components/StudentListItem";
