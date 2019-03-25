@@ -17,8 +17,8 @@ class App extends Component {
                         <NavBar />
                         <Route exact path="/" component={ViewStudents} />
                         <Route exact path="/add" component={AddStudent} />
-                        <Route exact path="/generate" component={GenerateGroups} />
                         <Route exact path="/groups" component={ViewGroups} />
+                        <Route exact path="/generate" component={GenerateGroups} />
                         <Route exact path="/random" component={GenerateRandomStudent} />
                     </>
                 </Container>
