@@ -52,10 +52,8 @@ class GenerateRandomStudent extends Component {
                     <ul>
                         <StudentListItem 
                             name={this.state.randomStudent.name}
-                            location={this.state.randomStudent.location}
-                            keywords={this.state.randomStudent.keywords}
-                            class={this.state.randomStudent.class}
-                            isInTech={this.state.randomStudent.isInTech} />
+                            full={false}
+                        />
                     </ul>
                 ) : (
                     <h3>Choose a class and click 'submit' to generate a random student.</h3>

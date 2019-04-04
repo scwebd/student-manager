@@ -47,7 +47,9 @@ class ViewStudents extends Component {
                                     location={student.location}
                                     keywords={student.keywords}
                                     class={student.class}
-                                    isInTech={student.isInTech} />
+                                    isInTech={student.isInTech} 
+                                    full={true}
+                                />
                             )}
                         </>
                     </ul>
