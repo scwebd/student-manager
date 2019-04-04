@@ -116,6 +116,9 @@ class GenerateGroups extends Component {
     render() {
         return (
             <>
+                {this.state.step !== 1 ? (
+                    <a onClick={(event) => { event.preventDefault(); this.setState({ step: 1 })}}>Reset Generator</a>
+                ) : null}
                 <Form>
                     {this.state.step === 1 ? (
                         <FormGroup>
