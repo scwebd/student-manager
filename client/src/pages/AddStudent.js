@@ -29,7 +29,7 @@ class AddStudent extends Component {
     handleFormSubmit = event => {
         event.preventDefault();
 
-        const student = { 
+        const student = {
             name: this.state.name,
             location: this.state.location,
             keywords: this.state.keywords.split(", "),
@@ -65,7 +65,7 @@ class AddStudent extends Component {
                             id="location"
                             value={this.state.location}
                             onChange={this.handleInputChange}
-                            placeholder="Somewhere, CO" 
+                            placeholder="Somewhere, CO"
                         />
                     </FormGroup>
                     <FormGroup>
@@ -76,7 +76,7 @@ class AddStudent extends Component {
                             id="keywords"
                             value={this.state.keywords}
                             onChange={this.handleInputChange}
-                            placeholder="Has 2 cats, likes tacos" 
+                            placeholder="Has 2 cats, likes tacos"
                         />
                     </FormGroup>
                     <FormGroup>
@@ -88,7 +88,7 @@ class AddStudent extends Component {
                             id="class"
                             value={this.state.class}
                             onChange={this.handleInputChange}
-                            placeholder="UDEN201902-FT" 
+                            placeholder="UDEN201902-FT"
                         />
                         <datalist id="classes">
                             {this.state.classes.map(classId => (
@@ -97,29 +97,29 @@ class AddStudent extends Component {
                         </datalist>
                     </FormGroup>
                     <legend className="col-form-label">Currently in tech industry?</legend>
-                    <FormGroup check>
+                    <FormGroup check inline>
                         <Label check>
                             <Input
                                 type="radio"
                                 name="isInTech"
                                 value="true"
                                 onChange={this.handleInputChange}
-                                checked={this.state.isInTech === "true"} 
+                                checked={this.state.isInTech === "true"}
                             />{' '}Yes
-                      </Label>
+                        </Label>
                     </FormGroup>
-                    <FormGroup check>
+                    <FormGroup check inline>
                         <Label check>
                             <Input
                                 type="radio"
                                 name="isInTech"
                                 value="false"
                                 onChange={this.handleInputChange}
-                                checked={this.state.isInTech === "false"} 
+                                checked={this.state.isInTech === "false"}
                             />{' '}No
                       </Label>
                     </FormGroup>
-                    <Button onClick={this.handleFormSubmit}>Submit</Button>
+                    <Button block onClick={this.handleFormSubmit}>Submit</Button>
                 </Form>
             </>
         )
