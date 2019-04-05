@@ -1,0 +1,22 @@
+body {
+    font-family: 'Cabin', sans-serif !important;
+}
+
+.btn-secondary.disabled, .btn-secondary:disabled {
+    background: #fe80a6 !important;
+    font-weight: 400;
+}
+
+.btn-secondary {
+    background: #98012e !important;
+    font-weight: 700 !important;
+    margin: 10px 0;
+}
+
+.btn-secondary:not(.disabled):hover {
+    background: #7f0127 !important;
+}
+
+h3 {
+    font-size: 1.5rem !important;
+}

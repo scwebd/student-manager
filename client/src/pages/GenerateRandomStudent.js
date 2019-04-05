@@ -45,8 +45,14 @@ class GenerateRandomStudent extends Component {
                                 class={this.state.class}
                                 handleInputChange={this.handleInputChange}
                             />
+                        <Button 
+                            onClick={this.handleFormSubmit} 
+                            disabled={!this.state.class}
+                            block
+                        >
+                            Generate Random
+                        </Button>
                     </FormGroup>
-                    <Button onClick={this.handleFormSubmit} disabled={!this.state.class}>Submit</Button>
                 </Form>
                 {this.state.randomStudent ? (
                     <ul>
@@ -56,7 +62,7 @@ class GenerateRandomStudent extends Component {
                         />
                     </ul>
                 ) : (
-                    <h3>Choose a class and click 'submit' to generate a random student.</h3>
+                    <h3>Choose a class and click 'generate random' to generate a random student.</h3>
                 )}
             </>
         )

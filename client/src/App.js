@@ -12,16 +12,18 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <Container>
-                    <>
-                        <NavBar />
-                        <Route exact path="/" component={ViewStudents} />
-                        <Route exact path="/add" component={AddStudent} />
-                        <Route exact path="/groups" component={ViewGroups} />
-                        <Route exact path="/generate" component={GenerateGroups} />
-                        <Route exact path="/random" component={GenerateRandomStudent} />
-                    </>
-                </Container>
+                <>
+                    <Route component={NavBar} />
+                    <Container>
+                        
+                            <Route exact path="/" component={ViewStudents} />
+                            <Route exact path="/add" component={AddStudent} />
+                            <Route exact path="/groups" component={ViewGroups} />
+                            <Route exact path="/generate" component={GenerateGroups} />
+                            <Route exact path="/random" component={GenerateRandomStudent} />
+                        
+                    </Container>
+                </>
             </Router>
         );
     }
