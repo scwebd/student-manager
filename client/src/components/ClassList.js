@@ -8,7 +8,7 @@ const ClassList = props => {
             <Input type="select" name="class" id="class" value={props.class} onChange={props.handleInputChange}>
                 <option>Choose class</option>
                 {props.classes.sort().map(classId => (
-                    <option value={classId}>{classId}</option>
+                    <option value={classId} key={classId}>{classId}</option>
                 ))}
             </Input>
         </>

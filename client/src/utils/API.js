@@ -7,6 +7,9 @@ export default {
     createStudent: function(student) {
         return axios.post("/api/students/", student);
     },
+    deleteStudent: function(id) {
+        return axios.delete(`/api/students/${id}`);
+    },
     getGroups: function() {
         return axios.get("/api/groupings/");
     },

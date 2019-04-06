@@ -9,10 +9,8 @@ const white = "#fff";
 const gray = "#e6e6e6";
 const Nav = styled("div")`
     background: ${red};
-    border-bottom: 5px solid ${gold};
+    border-bottom: 10px solid ${gold};
     margin-bottom: 1rem;
-    position: relative;
-    top: -5px
     ul {
         display: flex;
         flex-direction: row;
@@ -22,10 +20,10 @@ const Nav = styled("div")`
         padding: 0;
     }
     li {
-        border-bottom: 5px solid ${gold};
+        border-bottom: 10px solid ${gold};
         cursor: pointer;
         font-weight: 400;
-        margin-bottom: -5px;
+        margin-bottom: -10px;
         &.active {
             background: ${gray};
             border-bottom-color: ${red}
@@ -40,13 +38,11 @@ const Nav = styled("div")`
                 color: #333;
             }
         }
-
         a {
             color: ${white};
             display: inline-block;
             font-family: 'Cabin', sans-serif;
-            font-size: 0.9rem;
-            padding: 1rem 0.75rem 0.75rem;
+            padding: 0.75rem 2rem;
             &:hover {
                 text-decoration: none;
             }
