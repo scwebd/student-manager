@@ -17,7 +17,7 @@ const Delete = styled("span")`
 const StudentListItem = props => {
     return (
         <Item>
-            <h3>
+            <h4>
                 {props.name} 
                 {props.canDelete ? (
                     <Delete 
@@ -30,7 +30,7 @@ const StudentListItem = props => {
                         (delete)
                     </Delete> 
                 ) : null}
-            </h3>
+            </h4>
             {props.full ? (
                 <>
                     <p>{props.location}</p>

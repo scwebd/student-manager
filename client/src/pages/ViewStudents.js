@@ -67,11 +67,11 @@ class ViewStudents extends Component {
                 </Form>
                 {this.state.filteredStudents.length ? (
                     <>
-                        {!this.state.displayFull ? (
+                        {/* {!this.state.displayFull ? (
                             <a onClick={() => this.setState({ displayFull: true })}>Display full</a>
                         ) : (
                             <a onClick={() => this.setState({ displayFull: false })}>Display name only</a>
-                        )}
+                        )} */}
                         <Modal isOpen={this.state.modal} toggle={this.toggleDeleteModal}>
                             <ModalBody>Delete?</ModalBody>
                             <ModalFooter>
@@ -79,7 +79,7 @@ class ViewStudents extends Component {
                                 <Button color="warning" onClick={this.toggleDeleteModal}>Cancel</Button>
                             </ModalFooter>
                         </Modal>
-                        <ul>
+                        <ul style={{ paddingLeft: 0 }}>
                             <>
                                 {this.state.filteredStudents.map(student =>
                                     <StudentListItem

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import moment from "moment";
+import styled from "styled-components";
 import { Form } from "reactstrap";
 import API from "../utils/API";
 import Step1 from "../components/Step1";
@@ -7,6 +8,15 @@ import Step2 from "../components/Step2";
 import Step3 from "../components/Step3";
 import Step4 from "../components/Step4";
 import Step5 from "../components/Step5";
+
+const ResetLink = styled.a`
+    color: #98012e !important;
+    cursor: pointer;
+    text-decoration: underline !important;
+    &:hover {
+        color: #710829 !important;
+    }
+`
 
 class GenerateGroups extends Component {
     state = {
@@ -122,9 +132,6 @@ class GenerateGroups extends Component {
     render() {
         return (
             <>
-                {this.state.step !== 1 ? (
-                    <a onClick={(event) => { event.preventDefault(); this.setState({ step: 1 })}}>Reset Generator</a>
-                ) : null}
                 <Form>
                     {this.state.step === 1 ? (
                         <Step1 
@@ -168,9 +175,10 @@ class GenerateGroups extends Component {
                         saveGrouping={this.saveGrouping}
                         groups={this.state.groups}
                     />
-                ) : (
-                    <h3>Choose a max number of students per group and click 'submit' to generate groups.</h3>
-                )}
+                ) : null}
+                {this.state.step !== 1 ? (
+                    <ResetLink onClick={(event) => { event.preventDefault(); this.setState({ step: 1 })}}>Reset Generator</ResetLink>
+                ) : null}
             </>
 
         )

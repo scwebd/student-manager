@@ -57,12 +57,12 @@ class GenerateRandomStudent extends Component {
                 </Form>
                 {this.state.randomStudent ? (
                     <>
-                        {!this.state.displayFull ? (
+                        {/* {!this.state.displayFull ? (
                             <a onClick={() => this.setState({ displayFull: true })}>Display full</a>
                         ) : (
                             <a onClick={() => this.setState({ displayFull: false })}>Display name only</a>    
-                        )}
-                        <ul>
+                        )} */}
+                        <ul style={{ paddingLeft: 0 }}>
                             <StudentListItem 
                                 name={this.state.randomStudent.name}
                                 location={this.state.randomStudent.location}
