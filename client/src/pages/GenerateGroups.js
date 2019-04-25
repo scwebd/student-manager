@@ -177,7 +177,7 @@ class GenerateGroups extends Component {
                     />
                 ) : null}
                 {this.state.step !== 1 ? (
-                    <ResetLink onClick={(event) => { event.preventDefault(); this.setState({ step: 1 })}}>Reset Generator</ResetLink>
+                    <ResetLink onClick={(event) => { event.preventDefault(); this.setState({ step: 1, absences: null, maxSize: null, class: "" })}}>Reset Generator</ResetLink>
                 ) : null}
             </>
 
