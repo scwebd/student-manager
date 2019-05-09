@@ -43,13 +43,13 @@ class GenerateGroups extends Component {
             .catch(err => console.log(err));
     }
 
-    handleInputChange = event => {
-        const { name, value } = event.target;
+    handleInputChange = e => {
+        const { name, value } = e.target;
         this.setState({ [name]: value });
     }
 
-    handleMultiChange = event => {
-        const { value, options } = event.target;
+    handleMultiChange = e => {
+        const { value, options } = e.target;
         const ids = [];
 
         for (let i = 0; i < options.length; i++) {
@@ -61,19 +61,19 @@ class GenerateGroups extends Component {
         this.setState({ absentStudents: ids });
     }
 
-    handleChooseClass = event => {
-        event.preventDefault();
+    handleChooseClass = e => {
+        e.preventDefault();
         let filteredStudents = this.state.students.filter(student => student.class === this.state.class);
         this.setState({ filteredStudents, step: 2 });
     }
 
-    generateGroups = event => {
-        event.preventDefault();
+    generateGroups = e => {
+        e.preventDefault();
         this.setGroups();
     }
 
-    saveGrouping = event => {
-        event.preventDefault();
+    saveGrouping = e => {
+        e.preventDefault();
 
         const grouping = {
             name: this.state.groupingName,
@@ -87,8 +87,8 @@ class GenerateGroups extends Component {
             .catch(err => console.log(err));
     }
 
-    filterAbsentStudents = event => {
-        event.preventDefault();
+    filterAbsentStudents = e => {
+        e.preventDefault();
         let filteredStudents = this.state.filteredStudents.filter(student => !this.state.absentStudents.includes(student._id));
         this.setState({ filteredStudents, step: 4 });        
     }

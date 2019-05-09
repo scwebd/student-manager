@@ -21,8 +21,8 @@ const StudentListItem = props => {
                 {props.name} 
                 {props.canDelete ? (
                     <Delete 
-                        onClick={(event) => {
-                            event.preventDefault();
+                        onClick={e => {
+                            e.preventDefault();
                             props.setIdToDelete(props.id);
                             props.toggleDeleteModal();
                         }}

@@ -23,13 +23,13 @@ class GenerateRandomStudent extends Component {
             .catch(err => console.log(err));
     }
 
-    handleInputChange = event => {
-        const filteredStudents = this.state.students.filter(student => student.class === event.target.value);
-        this.setState({ class: event.target.value, filteredStudents });
+    handleInputChange = e => {
+        const filteredStudents = this.state.students.filter(student => student.class === e.target.value);
+        this.setState({ class: e.target.value, filteredStudents });
     }
 
-    handleFormSubmit = event => {
-        event.preventDefault();
+    handleFormSubmit = e => {
+        e.preventDefault();
 
         const students = this.state.filteredStudents;
         const randomStudent = students[Math.floor(Math.random() * students.length)];

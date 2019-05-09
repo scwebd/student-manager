@@ -21,13 +21,13 @@ class AddStudent extends Component {
             .catch(err => console.log(err));
     }
 
-    handleInputChange = event => {
-        const { name, value } = event.target;
+    handleInputChange = e => {
+        const { name, value } = e.target;
         this.setState({ [name]: value });
     }
 
-    handleFormSubmit = event => {
-        event.preventDefault();
+    handleFormSubmit = e => {
+        e.preventDefault();
 
         const student = {
             name: this.state.name,

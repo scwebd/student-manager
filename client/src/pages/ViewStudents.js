@@ -28,9 +28,9 @@ class ViewStudents extends Component {
         .catch(err => console.log(err));
     }
 
-    handleInputChange = event => {
-        const filteredStudents = this.state.students.filter(student => student.class === event.target.value);
-        this.setState({ class: event.target.value, filteredStudents });
+    handleInputChange = e => {
+        const filteredStudents = this.state.students.filter(student => student.class === e.target.value);
+        this.setState({ class: e.target.value, filteredStudents });
     }
 
     toggleDeleteModal = () => {

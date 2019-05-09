@@ -44,9 +44,9 @@ class ViewGroups extends Component {
             .catch(err => console.log(err));
     }
 
-    handleInputChange = event => {
-        const filteredGroups = this.state.groups.filter(group => group.class === event.target.value);
-        this.setState({ class: event.target.value, filteredGroups });
+    handleInputChange = e => {
+        const filteredGroups = this.state.groups.filter(group => group.class === e.target.value);
+        this.setState({ class: e.target.value, filteredGroups });
     }
 
     render() {
