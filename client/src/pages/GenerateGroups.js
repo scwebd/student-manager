@@ -12,6 +12,8 @@ import Step5 from "../components/Step5";
 const ResetLink = styled.a`
     color: #98012e !important;
     cursor: pointer;
+    display: block;
+    padding-bottom: 0.5em;
     text-decoration: underline !important;
     &:hover {
         color: #710829 !important;
@@ -132,6 +134,7 @@ class GenerateGroups extends Component {
     render() {
         return (
             <>
+                STEP: {this.state.step}
                 <Form>
                     {this.state.step === 1 ? (
                         <Step1 
@@ -176,8 +179,13 @@ class GenerateGroups extends Component {
                         groups={this.state.groups}
                     />
                 ) : null}
+
+                {this.state.step === 5 ? (
+                    <ResetLink onClick={(e) => { e.preventDefault(); this.generateGroups(e); }}>Regenerate Groups</ResetLink>
+                ) : null}
+
                 {this.state.step !== 1 ? (
-                    <ResetLink onClick={(event) => { event.preventDefault(); this.setState({ step: 1, absences: null, maxSize: null, class: "" })}}>Reset Generator</ResetLink>
+                    <ResetLink onClick={(e) => { e.preventDefault(); this.setState({ step: 1, absences: null, maxSize: null, class: "" })}}>Reset Generator</ResetLink>
                 ) : null}
             </>
 
