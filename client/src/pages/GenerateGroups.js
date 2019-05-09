@@ -134,7 +134,6 @@ class GenerateGroups extends Component {
     render() {
         return (
             <>
-                STEP: {this.state.step}
                 <Form>
                     {this.state.step === 1 ? (
                         <Step1 
